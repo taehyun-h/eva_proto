@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package user;
+
+message Time {
+    int64 time = 1;
+}
+
+message StudyingWord {
+    int32 id = 1;
+    int32 studied_count = 2;
+}
+
+message TestingWord {
+    int32 id = 1;
+    int32 passed_count = 2;
+    Time last_passed_time = 3;
+}
+
+message StudyingWords {
+    repeated StudyingWord studying_words = 1;
+}
+
+message TestingWords {
+    repeated TestingWord studying_words = 1;
+}
+
+message User {
+    Time last_signing_time = 1;
+    int32 today_study_date = 2;
+    int32 last_studied_word_id = 3;
+
+    map<int32, StudyingWord> studying_words = 4;
+    map<int32, TestingWord> testing_words = 5;
+
+    int32 today_studying_words_index = 6;
+    map<int32, StudyingWords> today_studying_words = 7;
+
+    int32 today_testing_words_index = 8;
+    map<int32, TestingWords> today_testing_words = 9;
+}
