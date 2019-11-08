@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "entities.proto";
+
+package service.sign;
+
+service Sign {
+    rpc SignIn(SignInRequest) returns (SignInResponse) {}
+}
+
+message SignInRequest {
+    int32 user_id = 1;
+}
+
+message SignInResponse {
+    service.entities.User user = 1;
+}
