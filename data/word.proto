@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package data.word;
+
+message Word {
+    int32 id = 1;
+    string spelling = 2;
+    string meaning = 3;
+    string meaning2 = 4;
+}
+
+message Words {
+    map<int32, Word> words = 1;
+}
