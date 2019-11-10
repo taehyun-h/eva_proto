@@ -26,7 +26,9 @@ message User {
     int32 today_study_date = 2;
     int32 last_studied_word_id = 3;
 
+    // key : word id
     map<int32, StudyingWord> studying_words = 4;
+    // key : word id
     map<int32, TestingWord> testing_words = 5;
 
     // key : word id
