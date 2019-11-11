@@ -22,23 +22,25 @@ message WordOrder {
 }
 
 message User {
-    Time last_signing_time = 1;
-    int32 today_study_date = 2;
-    int32 last_studied_word_id = 3;
+    string id = 1;
+
+    Time last_signing_time = 2;
+    int32 today_study_date = 3;
+    int32 last_studied_word_id = 4;
 
     // key : word id
-    map<int32, StudyingWord> studying_words = 4;
+    map<int32, StudyingWord> studying_words = 5;
     // key : word id
-    map<int32, TestingWord> testing_words = 5;
+    map<int32, TestingWord> testing_words = 6;
 
     // key : word id
-    map<int32, WordOrder> studying_word_orders = 6;
+    map<int32, WordOrder> studying_word_orders = 7;
     // key : word id
-    map<int32, WordOrder> testing_word_orders = 7;
+    map<int32, WordOrder> testing_word_orders = 8;
 
-    int32 today_studying_words_index = 8;
-    repeated int32 today_studying_word_ids = 9;
+    int32 today_studying_words_index = 9;
+    repeated int32 today_studying_word_ids = 10;
 
-    int32 today_testing_words_index = 10;
-    repeated int32 today_testing_word_ids = 11;
+    int32 today_testing_words_index = 11;
+    repeated int32 today_testing_word_ids = 12;
 }
