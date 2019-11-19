@@ -8,6 +8,7 @@ service Study {
 }
 
 message MoveToPreviousWordRequest {
+    string user_id = 1;
 }
 
 message MoveToPreviousWordResponse {
@@ -15,6 +16,7 @@ message MoveToPreviousWordResponse {
 }
 
 message MoveToNextWordRequest {
+    string user_id = 1;
 }
 
 message MoveToNextWordResponse {
