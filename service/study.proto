@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package service.study;
+
+service Study {
+    rpc MoveToPreviousWord(MoveToPreviousWordRequest) returns (MoveToPreviousWordResponse) {}
+    rpc MoveToNextWord(MoveToNextWordRequest) returns (MoveToNextWordResponse) {}
+}
+
+message MoveToPreviousWordRequest {
+}
+
+message MoveToPreviousWordResponse {
+    int32 new_index = 1;
+}
+
+message MoveToNextWordRequest {
+}
+
+message MoveToNextWordResponse {
+    int32 new_index = 1;
+}
