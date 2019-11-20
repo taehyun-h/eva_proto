@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package service.test;
+
+service Test {
+    rpc IKnow(IKnowRequest) returns (IKnowResponse) {}
+    rpc IDontKnow(IDontKnowRequest) returns (IDontKnowResponse) {}
+}
+
+message IKnowRequest {
+    string user_id = 1;
+}
+
+message IKnowResponse {
+    int32 new_index = 1;
+}
+
+message IDontKnowRequest {
+    string user_id = 1;
+}
+
+message IDontKnowResponse {
+    int32 new_index = 1;
+}
